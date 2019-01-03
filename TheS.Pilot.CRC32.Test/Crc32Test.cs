@@ -13,6 +13,7 @@ namespace TheS.Pilot.CRC32.Test
         [InlineData("ÊÇÑÊ´Õ¤¹ä·Â", 0x5fc1be2c)]
         [InlineData("¡¢¤§", 0x5d8914f4)]
         [InlineData("¢¤§¨", 0x576428b2)]
+        [InlineData("!@#$%^&*()-_=+\\|[{]};:'\",<.>/?", 0x638e0a4e)]
         public void Test1(string text, uint expected)
         {
             var sut = new Crc32Sanity();
@@ -28,6 +29,7 @@ namespace TheS.Pilot.CRC32.Test
         [InlineData("ÊÇÑÊ´Õ¤¹ä·Â", 0x5fc1be2c)]
         [InlineData("¡¢¤§", 0x5d8914f4)]
         [InlineData("¢¤§¨", 0x576428b2)]
+        [InlineData("!@#$%^&*()-_=+\\|[{]};:'\",<.>/?", 0x638e0a4e)]
         public void Test2(string text, uint expected)
         {
             var sut = new Crc32Rosetta();
@@ -43,6 +45,7 @@ namespace TheS.Pilot.CRC32.Test
         [InlineData("ÊÇÑÊ´Õ¤¹ä·Â", 0x5fc1be2c)]
         [InlineData("¡¢¤§", 0x5d8914f4)]
         [InlineData("¢¤§¨", 0x576428b2)]
+        [InlineData("!@#$%^&*()-_=+\\|[{]};:'\",<.>/?", 0x638e0a4e)]
         public void Test3(string text, uint expected)
         {
             var sut = new Crc32Dotnet();
